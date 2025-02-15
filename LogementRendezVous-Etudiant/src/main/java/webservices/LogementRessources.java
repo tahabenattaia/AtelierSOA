@@ -22,7 +22,7 @@ public class LogementRessources {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
         return Response.
-                status(200).
+                status(200).header("Access-Control-Allow-Origin", "*").
                 entity(help.getLogements()).
                 build();
     }
